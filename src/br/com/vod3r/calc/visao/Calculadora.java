@@ -1,8 +1,9 @@
 package br.com.vod3r.calc.visao;
 
-import java.awt.*;
+import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
+import javax.swing.plaf.DimensionUIResource;
 
 @SuppressWarnings("serial")
 public class Calculadora extends JFrame {
@@ -21,6 +22,7 @@ public class Calculadora extends JFrame {
 		setLayout(new BorderLayout());
 		
 		Display display = new Display();
+		display.setPreferredSize(new DimensionUIResource(233, 60));
 		add(display, BorderLayout.NORTH);
 		
 		Teclado teclado = new Teclado();
